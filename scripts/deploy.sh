@@ -5,8 +5,13 @@ REPO_DIR="$HOME/PracticaFinalAutomatizado"
 SRC_DIR="$REPO_DIR/src"
 BUILD_DIR="$REPO_DIR/build"
 TOMCAT_WEBAPPS="/opt/tomcat/webapps"
-SERVLET_JAR="/opt/tomcat/lib/servlet-api.jar"
-
+SERVLET_JAR="$REPO_DIR/libs/jakarta.servlet-api-6.0.0.jar"
+# Descargar JAR si no existe
+if [ ! -f "$SERVLET_JAR" ]; then
+    echo "Descargando jakarta.servlet-api..."
+    mkdir -p "$REPO_DIR/libs"
+    wget -q -O "$SERVLET_JAR" https://repo1.maven.org/maven2/jakarta/servlet/jakarta.servlet-api/6.0.0/jakarta.servlet-api-6.0.0.jar
+fi
 echo "===== INICIO DEL DESPLIEGUE ====="
 
 cd "$REPO_DIR" || exit 1
