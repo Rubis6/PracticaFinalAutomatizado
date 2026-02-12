@@ -5,7 +5,7 @@ REPO_DIR="$HOME/PracticaFinalAutomatizado"
 SRC_DIR="$REPO_DIR/src"
 BUILD_DIR="$REPO_DIR/build"
 TOMCAT_WEBAPPS="/opt/tomcat/webapps"
-SERVLET_JAR="/opt/tomcat/lib/jakarta.servlet-api.jar"
+SERVLET_JAR="/opt/tomcat/lib/servlet-api.jar"
 
 echo "===== INICIO DEL DESPLIEGUE ====="
 
